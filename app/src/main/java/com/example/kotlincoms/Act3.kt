@@ -56,7 +56,31 @@ fun ActivitasPertama(modifier: Modifier) {
             colors = CardDefaults.cardColors(
                 containerColor = colorResource(R.color.card_0_bg)
             )
-        ) 
+        ) {
+           Row() {
+               val gambar = painterResource(R.drawable.umylogo)
+               Image(
+                   painter = gambar,
+                   contentDescription = null,
+                   modifier = Modifier.size(100.dp).padding(5.dp)
+               )
+               Spacer(modifier = Modifier.width(30.dp))
+               Column() {
+                   Text(
+                       stringResource("Farhan Rasyid Mustaqim"),
+                       fontSize = 30.sp,
+                       fontFamily = FontFamily.Cursive,
+                       color = Color.White,
+                       modifier = Modifier.padding(top = 15.dp)
+                   )
+                   Text(
+                       stringResource(R.string.alamat),
+                       fontSize = 20.sp,
+                       color = Color.Yellow,
+                       modifier = Modifier.padding(top = 10.dp)
+                   )
+               }
+           }
         }
 
 

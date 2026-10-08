@@ -29,7 +29,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.material3.CardDefaults
-
+import androidx.compose.material3.CardDefaults.cardColors
 
 
 @Composable
@@ -81,6 +81,16 @@ fun ActivitasPertama(modifier: Modifier) {
                    )
                }
            }
+        }
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+        ) {
+            Text(
+                stringResource(R.string.copy),
+                modifier = Modifier
+                    .align(Alignment.BottomCenter))
+            )
         }
 
 

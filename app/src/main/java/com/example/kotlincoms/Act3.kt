@@ -18,18 +18,15 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.size
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.sp
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material3.Card
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CardDefaults.cardColors
+import androidx.compose.material3.AlertDialogDefaults.containerColor
+import androidx.compose.material3.Card
 
 
 @Composable
@@ -57,7 +54,7 @@ fun ActivitasPertama(modifier: Modifier) {
                 containerColor = colorResource(R.color.card_0_bg)
             )
         ) {
-           Row() {
+           Row {
                val gambar = painterResource(R.drawable.umylogo)
                Image(
                    painter = gambar,
@@ -65,9 +62,9 @@ fun ActivitasPertama(modifier: Modifier) {
                    modifier = Modifier.size(100.dp).padding(5.dp)
                )
                Spacer(modifier = Modifier.width(30.dp))
-               Column() {
+               Column {
                    Text(
-                       stringResource("Farhan Rasyid Mustaqim"),
+                       stringResource(R.string.nama),
                        fontSize = 30.sp,
                        fontFamily = FontFamily.Cursive,
                        color = Color.White,
@@ -89,12 +86,9 @@ fun ActivitasPertama(modifier: Modifier) {
             Text(
                 stringResource(R.string.copy),
                 modifier = Modifier
-                    .align(Alignment.BottomCenter))
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = 50.dp)
             )
         }
-
-
-
-
     }
 })
